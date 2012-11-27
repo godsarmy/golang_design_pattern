@@ -8,7 +8,7 @@ type PetShop struct {
 
 func (p *PetShop) show_pet() {
     pet := p.pet_factory.get_pet()
-    fmt.Println("This is a lovely", pet.String())
+    fmt.Println("This is a lovely", pet)
     fmt.Println("It says", pet.speak())
     fmt.Println("It eats", p.pet_factory.get_food())
 }
