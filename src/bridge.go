@@ -3,26 +3,26 @@ package main
 import "fmt"
 
 //implementor
-type DrawAPI interface { 
+type DrawAPI interface {
     drawCircle (x int, y int, radius int)
 }
 
 //implementor 1
 type DrawAPI1 struct {}
 
-func (p DrawAPI1) drawCircle(x int, y int, radius int) { 
+func (p DrawAPI1) drawCircle(x int, y int, radius int) {
     fmt.Printf("API1.circle at %d:%d radius %d\n", x, y, radius)
 }
 
 //implementor 2
 type DrawAPI2 struct {}
 
-func (p DrawAPI2) drawCircle(x int, y int, radius int) { 
+func (p DrawAPI2) drawCircle(x int, y int, radius int) {
     fmt.Printf("API2.circle at %d:%d radius %d\n", x, y, radius)
 }
 
 //refined abstraction
-type CircleShape struct { 
+type CircleShape struct {
     x, y, radius int
     drawingAPI DrawAPI
 }
