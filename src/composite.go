@@ -3,26 +3,26 @@ package main
 import "fmt"
 
 type Graphic interface {
-    print ()
+    print()
 }
 
 type CompositeGraphic struct {
-    name string
+    name          string
     childGraphics []Graphic
 }
 
-func (p *CompositeGraphic) print () {
+func (p *CompositeGraphic) print() {
     fmt.Println("Composite", p.name)
     for _, graphic := range p.childGraphics {
         graphic.print()
     }
 }
 
-func (p *CompositeGraphic) add (graphic Graphic) {
+func (p *CompositeGraphic) add(graphic Graphic) {
     p.childGraphics = append(p.childGraphics, graphic)
 }
 
-func (p *CompositeGraphic) remove (graphic Graphic) {
+func (p *CompositeGraphic) remove(graphic Graphic) {
     new_list := []Graphic{}
     for _, obj := range p.childGraphics {
         if graphic != obj {
@@ -36,7 +36,7 @@ type Ellipse struct {
     name string
 }
 
-func (p *Ellipse) print () {
+func (p *Ellipse) print() {
     fmt.Println("Ellipse", p.name)
 }
 
@@ -47,9 +47,9 @@ func main() {
     ellipse4 := &Ellipse{"ellipse4"}
 
     //Initialize three composite graphics
-    graphic := &CompositeGraphic{name:"composite"}
-    graphic1 := &CompositeGraphic{name:"composite1"}
-    graphic2 := &CompositeGraphic{name:"composite2"}
+    graphic := &CompositeGraphic{name: "composite"}
+    graphic1 := &CompositeGraphic{name: "composite1"}
+    graphic2 := &CompositeGraphic{name: "composite2"}
 
     //Composes the graphics
     graphic1.add(ellipse1)
