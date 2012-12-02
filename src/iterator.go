@@ -24,9 +24,7 @@ type StringIterator struct {
 type DataSet []string
 
 func (p *DataSet) get_iterator() *StringIterator {
-    iter := new(StringIterator)
-    iter.current = 0
-    iter.data_set = p
+    iter := &StringIterator{Iterator{0, p}}
     return iter
 }
 
