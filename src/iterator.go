@@ -17,22 +17,17 @@ func (p *Iterator) has_next() bool {
     return rc
 }
 
-type StringIterator struct {
-    Iterator
+func (p *Iterator) next() interface{} {
+    data := (*p.data_set)[p.current]
+    p.current++
+    return data
 }
 
 type DataSet []string
 
-func (p *DataSet) get_iterator() *StringIterator {
-    iter := &StringIterator{Iterator{0, p}}
+func (p *DataSet) get_iterator() *Iterator {
+    iter := &Iterator{0, p}
     return iter
-}
-
-//specific return function
-func (p *StringIterator) next() string {
-    data := (*p.data_set)[p.current]
-    p.current++
-    return data
 }
 
 func main() {
