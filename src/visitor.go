@@ -41,9 +41,7 @@ func (p *C) accept(visitor *Visitor) {
 type Visitor struct{}
 
 func (p *Visitor) visit(e Element) {
-    typ := reflect.TypeOf(e)
-
-    if (typ == reflect.TypeOf(&B{})) {
+    if typ := reflect.TypeOf(e); typ == reflect.TypeOf(&B{}) {
         p.visit_B(e)
         return
     }
