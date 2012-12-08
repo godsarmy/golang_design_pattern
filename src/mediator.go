@@ -21,9 +21,10 @@ func (p *ConcreteMediator) send(message string, colleague Colleague) {
     }
 }
 
+//Colleague
 type Colleague interface{}
 
-//Colleague
+//Concrete Colleagues
 type ConcreteColleague1 struct {
     mediator Mediator
 }
