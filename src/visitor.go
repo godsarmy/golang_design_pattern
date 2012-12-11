@@ -1,4 +1,3 @@
-//golang version of java code in http://en.wikipedia.org/wiki/Strategy_pattern
 package main
 
 import (
