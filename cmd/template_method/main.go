@@ -22,13 +22,13 @@ func (p *Template) templateMethod() {
 }
 
 func (p IntList) modify_list() {
-	for i, _ := range []int(p) {
+	for i := range []int(p) {
 		p[i] *= 2
 	}
 }
 
 func (p ByteList) modify_list() {
-	for i, _ := range []byte(p) {
+	for i := range []byte(p) {
 		p[i]++
 	}
 }

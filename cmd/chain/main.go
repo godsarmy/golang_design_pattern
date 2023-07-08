@@ -34,7 +34,7 @@ func (p *ConcreteHandler2) handle(request int) {
 
 // implementor 3
 type ConcreteHandler3 struct {
-	successor Handler
+	successor Handler //nolint:unused
 }
 
 func (p *ConcreteHandler3) handle(request int) {

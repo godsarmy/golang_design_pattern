@@ -27,6 +27,6 @@ func main() {
 	var ren1, ren2 MoveFileCommand
 	ren2, list = list[len(list)-1], list[:len(list)-1]
 	ren2.undo()
-	ren1, list = list[len(list)-1], list[:len(list)-1]
+	ren1, _ = list[len(list)-1], list[:len(list)-1]
 	ren1.undo()
 }

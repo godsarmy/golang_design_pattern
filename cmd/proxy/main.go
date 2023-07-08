@@ -29,6 +29,7 @@ func (p *Proxy) work() {
 	} else {
 		time.Sleep(1 * time.Second)
 		fmt.Println("Sales Manager is busy")
+		p.Sales.work()
 	}
 }
 

@@ -22,6 +22,7 @@ func (p *CompositeGraphic) add(graphic Graphic) {
 	p.childGraphics = append(p.childGraphics, graphic)
 }
 
+//nolint:unused
 func (p *CompositeGraphic) remove(graphic Graphic) {
 	new_list := []Graphic{}
 	for _, obj := range p.childGraphics {
