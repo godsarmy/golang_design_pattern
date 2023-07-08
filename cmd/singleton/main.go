@@ -1,6 +1,6 @@
 package main
 
-import "singleton"
+import "internal/singleton"
 
 func main() {
 	u := singleton.Instance()

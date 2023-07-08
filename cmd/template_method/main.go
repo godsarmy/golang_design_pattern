@@ -1,4 +1,4 @@
-// implement of http://en.wikipedia.org/wiki/Memento_pattern
+// implement of https://en.wikipedia.org/wiki/Template_method_pattern
 package main
 
 import "fmt"
@@ -18,7 +18,6 @@ type Template struct {
 }
 
 func (p *Template) templateMethod() {
-	p.list.iterate_list()
 	fmt.Println(p.list.get_result())
 }
 
